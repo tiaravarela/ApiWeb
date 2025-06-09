@@ -1,4 +1,5 @@
 * {
+  cursor: url('minimal-cat-pointer.png'),auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,15 +13,17 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  cursor: url('minimal-cat-pointer.png'),auto;
 }
 
 .header {
+  cursor: url('minimal-cat-pointer.png'),auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 }
 
 .title-image {
@@ -66,21 +69,24 @@ button:hover {
 }
 
 .main-wrapper {
+  cursor: url('minimal-cat-pointer.png'),auto;
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1600px;
   width: 100%;
   margin: 0 auto;
   flex-grow: 1;
 }
 
 .breed-list-container {
+  cursor: url('minimal-cat-pointer.png'),auto;
   width: 100%;
   text-align: center;
   order: 2;
 }
 
 .breed-list {
+  cursor: url('minimal-cat-pointer.png'),auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
@@ -88,6 +94,7 @@ button:hover {
 }
 
 .breed-card {
+  cursor: url('minimal-cat-pointer.png'),auto;
   background-color: #bb8ca7;
   border: 1px solid #ddd;
   border-radius: 8px;
