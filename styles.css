@@ -191,3 +191,28 @@ body {
   justify-content: flex-start;
 }
 
+#close-info {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #d6336c; /* rosa oscuro para que destaque */
+  font-weight: bold;
+  user-select: none;
+}
+
+.container {
+  position: relative; /* importante para que el botón se posicione bien */
+  margin-top: 30px;
+  background-color: #ffd6e8;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
