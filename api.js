@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    $('#close-info').on('click', function() {
+    $('.container').hide();
+  });
+
   // Lista de razas válidas para evitar búsquedas inválidas
   const razasValidas = [
     "Abyssinian",
@@ -172,4 +176,5 @@ $(document).ready(function () {
     $('#search-input').val(breedName);
     fetchCatInfo(breedName);
   });
+  
 });

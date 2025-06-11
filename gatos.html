@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gatitos - Busca tu raza</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxfJbjJ_VCFv7BsJVb2w9Ar1rPxiQNcUSRqraENLm5IEAb5nBTG1j47cE5T8SbGPJ_VXY&usqp=CAU" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
-    <img src="https://cdn.custom-cursor.com/db/10835/minimal-cat-pointer.png" alt="Cats Title" class="title-image" />
-    <br><br>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxfJbjJ_VCFv7BsJVb2w9Ar1rPxiQNcUSRqraENLm5IEAb5nBTG1j47cE5T8SbGPJ_VXY&usqp=CAU"
+    alt="Icono Gatitos"
+    class="icono-pagina"
+  />
+  <h1 class="titulo-header">Gatitos</h1>
+
+  <div class="search-section">
     <form id="search-form">
-      <input type="text" id="search-input" placeholder="Escribe la raza del gato" required autocomplete="off" />
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Escribe la raza del gato"
+        required
+        autocomplete="off"
+      />
       <button type="submit">Buscar</button>
     </form>
-  </header>
+  </div>
+</header>
   <div class="main-wrapper">
     <div class="container" style="display: none;">
+      <button id="close-info" aria-label="Cerrar información">&times;</button>  <!-- Aquí -->
       <h1>Información de la Raza: <span id="breed-title"></span></h1>
       <h2 class="breed-name" id="breed-name"></h2>
       <div class="cat-card" id="cat-card" style="display: none;">
-        <img src="default-cat.jpg" alt="Imagen del gato" class="cat-image" id="cat-image" />
-        <div class="cat-info" id="cat-info"></div>
-      </div>
-      <p class="error" id="error-msg"></p>
+      <img src="default-cat.jpg" alt="Imagen del gato" class="cat-image" id="cat-image" />
+      <div class="cat-info" id="cat-info"></div>
     </div>
+  <p class="error" id="error-msg"></p>
+</div>
     <br><br><br><br><br>
     <div class="breed-list-container">
       <h2>Razas Disponibles</h2>
