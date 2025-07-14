@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('.container').hide();
   });
 
-  // Lista de razas válidas para evitar búsquedas inválidas
   const razasValidas = [
     "Abyssinian",
     "Aegean",
@@ -48,16 +47,14 @@ $(document).ready(function () {
     "Turkish Van"
   ];
 
-  // Imagen por defecto si API no devuelve imagen
   const defaultImage = 'default-cat.jpg';
 
-  // Convierte texto a formato "Título"
   function toTitleCase(str) {
     return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   }
 
   function fetchCatInfo(name) {
-    $('.container').hide(); // Hide container initially
+    $('.container').hide(); 
     $('#error-msg').text('');
     $('#breed-name').text('Cargando...');
     $('#cat-info').html('');
@@ -69,7 +66,7 @@ $(document).ready(function () {
       $('#error-msg').text('Por favor, escribe una raza válida.');
       $('#cat-info').html('');
       $('#cat-card').hide();
-      $('.container').show(); // Show container for error message
+      $('.container').show();
       return;
     }
 
@@ -107,14 +104,14 @@ $(document).ready(function () {
           }
 
           $('#cat-card').show();
-          $('.container').show(); // Show container on successful data load
+          $('.container').show(); 
         } else {
           $('#breed-name').text('No encontrado');
           $('#error-msg').text('No se encontró información sobre esta raza.');
           $('#cat-info').html('');
           $('#cat-image').attr('src', defaultImage);
           $('#cat-card').hide();
-          $('.container').show(); // Show container for error message
+          $('.container').show(); 
         }
       },
       error: function(jqXHR) {
@@ -123,12 +120,11 @@ $(document).ready(function () {
         $('#cat-info').html('');
         $('#cat-image').attr('src', defaultImage);
         $('#cat-card').hide();
-        $('.container').show(); // Show container for error message
+        $('.container').show();
       }
     });
   }
 
-  // Función para cargar imágenes de todas las razas
   function loadBreedImages() {
     razasValidas.forEach(function(breed) {
       $.ajax({
@@ -159,10 +155,8 @@ $(document).ready(function () {
     });
   }
 
-  // Cargar imágenes al iniciar
   loadBreedImages();
 
-  // Evento de búsqueda
   $('#search-form').on('submit', function(e) {
     e.preventDefault();
     const breedNameRaw = $('#search-input').val().trim();
@@ -170,7 +164,6 @@ $(document).ready(function () {
     fetchCatInfo(breedName);
   });
 
-  // Evento de clic en las tarjetas de raza
   $('#breed-list').on('click', '.breed-card', function() {
     const breedName = $(this).data('breed');
     $('#search-input').val(breedName);
